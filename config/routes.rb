@@ -267,6 +267,8 @@ Rails.application.routes.draw do
       end
     end
 
+    resources :lists, only: [:index, :create, :show, :update, :destroy]
+
     namespace :web do
       resource :settings, only: [:update]
       resource :embed, only: [:create]
